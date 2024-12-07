@@ -9,7 +9,6 @@ public class Main {
         double peorPromedio = mostrarPeorPromedio(alumnos, notas);
         System.out.println("El peor promedio es: " + peorPromedio);
         promedioGrupal(alumnos, notas);
-
     }
 
     private static double mostrarMejorPromedio(String[] alumnos, double[][] notas) {
@@ -54,25 +53,23 @@ public class Main {
     }
     public static void mostrarNotas(String[] alumnos, double[][] notas) {
         for (int i = 0; i < alumnos.length; i++) {
-            System.out.println("Nota del alumno " + alumnos[i] + ": ");
-            System.out.println("Nota : " + notas[i][0]);
+            System.out.println("Notas del alumno " + alumnos[i] + ": ");
+            System.out.println("Nota 1: " + notas[i][0]);
         }
     }
 
   // sólo se tomara una nota para el promedio
     public static double obtenerPromedio(String alumno, double[] nota) {
-        double promedio = 0;
-        return promedio = nota[0];
+        return  nota[0];
     }
 
     public static double mostrarPeorPromedio(String[] alumnos, double[][] notas) {
         double peorPromedio = 100;
-        String peorAlumno = "";
+
         for (int i = 0; i < alumnos.length; i++) {
             double promedio = obtenerPromedio(alumnos[i], notas[i]);
             if (promedio < peorPromedio) {
                 peorPromedio = promedio;
-                peorAlumno = alumnos[i];
             }
         }
         return peorPromedio;
