@@ -13,12 +13,11 @@ public class Main {
 
     private static double mostrarMejorPromedio(String[] alumnos, double[][] notas) {
         double mejorPromedio = 0;
-        String mejorAlumno = "";
+
         for (int i = 0; i < alumnos.length; i++) {
             double promedio = obtenerPromedio(alumnos[i], notas[i]);
             if (promedio > mejorPromedio) {
                 mejorPromedio = promedio;
-                mejorAlumno = alumnos[i];
             }
         }
         return mejorPromedio;
@@ -54,11 +53,10 @@ public class Main {
     public static void mostrarNotas(String[] alumnos, double[][] notas) {
         for (int i = 0; i < alumnos.length; i++) {
             System.out.println("Notas del alumno " + alumnos[i] + ": ");
-            System.out.println("Nota 1: " + notas[i][0]);
+            System.out.println("Nota : " + notas[i][0]);
         }
     }
 
-  // sólo se tomara una nota para el promedio
     public static double obtenerPromedio(String alumno, double[] nota) {
         return  nota[0];
     }
