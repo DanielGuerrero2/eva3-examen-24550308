@@ -38,10 +38,10 @@ public class Main {
     }
     public static double [][] registrarNota(String[] alumnos) {
         Scanner scanner = new Scanner(System.in);
-        double[][] notas = new double[alumnos.length][3];
+        double[][] notas = new double[alumnos.length][1];
         for (int i = 0; i < alumnos.length; i++) {
             for (int j = 0; j < 1; j++) {
-                System.out.println("Ingrese la nota " + (j + 1) + " del alumno " + alumnos[i] + ": ");
+                System.out.println("Ingrese la nota del alumno " + alumnos[i] + ": ");
                int nota = scanner.nextInt();
                 while (nota < 0 || nota > 100) {
                     System.out.println("Ingrese una nota válida: ");
@@ -54,10 +54,8 @@ public class Main {
     }
     public static void mostrarNotas(String[] alumnos, double[][] notas) {
         for (int i = 0; i < alumnos.length; i++) {
-            System.out.println("Notas del alumno " + alumnos[i] + ": ");
-            for (int j = 0; j < 3; j++) {
-                System.out.println("Nota " + (j + 1) + ": " + notas[i][j]);
-            }
+            System.out.println("Nota del alumno " + alumnos[i] + ": ");
+            System.out.println("Nota : " + notas[i][0]);
         }
     }
 
